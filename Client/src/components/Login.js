@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NativeModules, View, Text, TextInput, TouchableHighlight } from 'react-native';
+import { NativeModules, View, Text, TextInput, TouchableHighlight, NavigatorIOS } from 'react-native';
 import axios from 'axios';
 
 class Login extends Component {
@@ -7,6 +7,13 @@ class Login extends Component {
     super(props);
 
     this.state = { email: '', password: '', hash: '' };
+  }
+
+  navHome() {
+    this.props.navigator.push({
+      title: 'home',
+      component: Home
+    })
   }
 
   login() {
@@ -60,7 +67,8 @@ class Login extends Component {
             <Text style={{ fontSize: 22 }}>Login</Text>
           </TouchableHighlight>
           <TouchableHighlight
-            onPress={this.register.bind(this)}
+            //onPress={this.register.bind(this)}
+            onPress={this.navHome.bind(this)}
             style={styles.registerStyle}
           >
             <Text style={{ fontSize: 22 }}>Register</Text>
