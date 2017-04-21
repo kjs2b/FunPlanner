@@ -67,8 +67,7 @@ class Login extends Component {
             <Text style={{ fontSize: 22 }}>Login</Text>
           </TouchableHighlight>
           <TouchableHighlight
-            //onPress={this.register.bind(this)}
-            onPress={this.navHome.bind(this)}
+            onPress={this.register.bind(this)}
             style={styles.registerStyle}
           >
             <Text style={{ fontSize: 22 }}>Register</Text>

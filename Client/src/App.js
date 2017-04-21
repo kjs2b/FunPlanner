@@ -17,11 +17,16 @@ class App extends Component {
     return (
       <NavigatorIOS
         initailRoute={{
-          title: 'login',
+          title: 'Login',
           component: Login,
-          passProps: { logIn: this.logIn.bind(this) }
-        }} />
-      )
+          //passProps: { logIn: this.logIn.bind(this) }
+        }}
+        style={{flex:1}}
+      />
+    );
+    // return (
+    //   <Login />
+    // );
   }
 }
 
