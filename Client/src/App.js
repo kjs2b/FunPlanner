@@ -7,7 +7,6 @@ class App extends Component {
     super();
 
     this.state = { loggedIn: false };
-    this.login = this.logIn.bind(this);
   }
 
   logIn() {
@@ -19,7 +18,8 @@ class App extends Component {
       <NavigatorIOS
         initailRoute={{
           title: 'login',
-          component: Login
+          component: Login,
+          passProps: { logIn: this.logIn.bind(this) }
         }} />
       )
   }

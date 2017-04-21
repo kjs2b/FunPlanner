@@ -25,7 +25,7 @@ class Login extends Component {
           hash
         })
       .then((res) => {
-        if (res.body === 'Match') this.onLogin();
+        if (res.body === 'Match') this.props.onLogin();
       })
       .catch((err) => console.log(err));
     });
