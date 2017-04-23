@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavigatorIOS, Text } from 'react-native';
+import { NavigatorIOS, Text, PropTypes } from 'react-native';
 
 class Dummy extends Component {
   static propTypes = {
@@ -9,7 +9,9 @@ class Dummy extends Component {
 
   render() {
     return (
-      <Text>This is a dummy component.</Text>
+      <View>
+        <Text>This is a dummy component.</Text>
+      </View>
     );
   }
 }
