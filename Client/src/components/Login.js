@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { NativeModules, View, Text, TextInput, TouchableHighlight, NavigatorIOS } from 'react-native';
 import axios from 'axios';
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = { email: '', password: '', hash: '' };
+  //   this.state = { email: '', password: '', hash: '' };
+  // }
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    navigator: PropTypes.object.isRequired,
   }
 
   navHome() {
@@ -51,23 +55,23 @@ class Login extends Component {
         <TextInput
           style={{ height: 40, borderWidth: 1, paddingLeft: 10 }}
           placeholder="Enter email here"
-          onChangeText={(email) => this.setState({ email })}
+          //onChangeText={(email) => this.setState({ email })}
         />
         <Text>Password: </Text>
         <TextInput
           style={{ height: 40, borderWidth: 1, paddingLeft: 10 }}
           placeholder="Enter password here"
-          onChangeText={(password) => this.setState({ password })}
+          //onChangeText={(password) => this.setState({ password })}
         />
         <View style={styles.buttonContainer}>
           <TouchableHighlight
-            onPress={this.login.bind(this)}
+            //onPress={this.login.bind(this)}
             style={styles.loginStyle}
           >
             <Text style={{ fontSize: 22 }}>Login</Text>
           </TouchableHighlight>
           <TouchableHighlight
-            onPress={this.register.bind(this)}
+            //onPress={this.register.bind(this)}
             style={styles.registerStyle}
           >
             <Text style={{ fontSize: 22 }}>Register</Text>

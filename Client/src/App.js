@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, NavigatorIOS } from 'react-native';
-import Login from './components/Login';
+//import Login from './components/Login';
+import Dummy from './components/Dummy';
 
 class App extends Component {
   constructor() {
@@ -15,18 +16,17 @@ class App extends Component {
 
   render() {
     return (
-      <NavigatorIOS
-        initailRoute={{
-          title: 'Login',
-          component: Login,
-          //passProps: { logIn: this.logIn.bind(this) }
-        }}
-        style={{flex:1}}
-      />
+      <View>
+        <Text>Anyone out there?</Text>
+        <NavigatorIOS
+          initailRoute={{
+            title: 'Login',
+            component: Login,
+            //passProps: { logIn: this.logIn.bind(this) }
+          }}
+        />
+      </View>
     );
-    // return (
-    //   <Login />
-    // );
   }
 }
 
