@@ -1,0 +1,17 @@
+body {
+  background-image: url('./columbia-river-gorge.jpg');
+}
+
+.snapshots {
+  height: 200px;
+  width: 350px;
+}
+
+.items {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
